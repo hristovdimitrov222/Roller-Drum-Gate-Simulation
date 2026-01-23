@@ -1,9 +1,24 @@
 # Roller-Drum-Gate-Simulation
-Here the code used for the simulation of roller-drum gate load cases mentioned in the PAPER"..." are shared. The code is for OpenFOAM. The code can be altered and shared freely. 
-ok okok 
+The code provided here is supplementary to the paper Berghammer, L.M., & Dimitrov, H. (2026). Influence of a jet guiding structure on flow under a roller drum gate – Comparison of flow measurements and numerical simulations. *11th IAHR International Symposium on Hydraulic Structures*, Chengdu, China. ISSN: ..., DOI: https://doi.org/[DOI] . The code is for the Volume-of-Fluid solver "interfoam" of OpenFOAM. The meshes and simulation set-up's are seperated to "with extension" and "without extension", while for "without extension" there is are subfolders to check the prefilled set-up and the filling one. 
 
-asdas 
-
-
+The code can be altered and shared freely. 
+ 
 # How to use
-blabla
+Download the desired cases for testing from the [inter](inter) folder. Run the following commands:
+
+```
+decomposePar
+mpirun -np 5 interFoam -parallel
+reconstructPar
+rm -r processor*
+```
+Observe the results in a post-processing software.
+
+For further understanding of the boundary conditions and how to set them up, please refer to Thorenz, C. (2024): 'Boundary Conditions for Hydraulic Structures Modelling with OpenFOAM', 10th International Symposium on Hydraulic Structures, Zürich. ISSN 0374-0056 , DOI: https://doi.org/[10.3929/ethz-b-000675949] or [HydBCsForOF](https://github.com/baw-de/HydBCsForOF/tree/v2412).
+
+# Development
+**Roller-Drim-Gate-Simulation** is developed by the [Technical University of Munich](https://www.tum.de/en/).
+
+# License
+**Roller-Drum-Gate-Simulation** is distributed by the [Technical University of Munich](https://www.tum.de/en/) and is freely available and open source, licensed under the [GNU General Public License 3](https://www.gnu.org/licenses/gpl-3.0.html).
+See [License](LICENSE) for details.
